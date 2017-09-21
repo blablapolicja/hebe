@@ -1,1 +1,1 @@
-web: node services/index.js
+web: with_ngrok node services/index.js

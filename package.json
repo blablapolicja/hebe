@@ -1,0 +1,22 @@
+{
+  "name": "hebe",
+  "version": "0.0.1",
+  "description": "Bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blablapolicja/hebe.git"
+  },
+  "keywords": [
+    "bot"
+  ],
+  "author": "Stanislav Dzhus (blablapolicja@gmail.com)",
+  "license": "GNU GPLv3",
+  "bugs": {
+    "url": "https://github.com/blablapolicja/hebe/issues"
+  },
+  "homepage": "https://github.com/blablapolicja/hebe#readme"
+}

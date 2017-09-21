@@ -2,9 +2,10 @@
   "name": "hebe",
   "version": "0.0.1",
   "description": "Bot",
-  "main": "index.js",
+  "main": "services/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node services/index.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,13 @@
   "bugs": {
     "url": "https://github.com/blablapolicja/hebe/issues"
   },
-  "homepage": "https://github.com/blablapolicja/hebe#readme"
+  "homepage": "https://github.com/blablapolicja/hebe#readme",
+  "dependencies": {
+    "express": "^4.15.4"
+  },
+  "devDependencies": {
+    "eslint": "^4.7.1",
+    "eslint-config-airbnb-base": "^12.0.0",
+    "eslint-plugin-import": "^2.7.0"
+  }
 }

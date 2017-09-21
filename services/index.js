@@ -4,7 +4,7 @@ const app = express();
 const HTTP_PORT = 8080;
 
 app.set('port', (process.env.PORT || HTTP_PORT));
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => res.send('HEBE says Hi'));

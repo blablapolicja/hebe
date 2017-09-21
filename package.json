@@ -22,7 +22,8 @@
   "homepage": "https://github.com/blablapolicja/hebe#readme",
   "dependencies": {
     "body-parser": "^1.18.1",
-    "express": "^4.15.4"
+    "express": "^4.15.4",
+    "request": "^2.82.0"
   },
   "devDependencies": {
     "eslint": "^4.7.1",

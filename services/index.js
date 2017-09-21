@@ -1,20 +1,11 @@
-const fs = require('fs');
-const path = require('path');
-const http = require('http');
-const https = require('https');
 const express = require('express');
-const pathToDir = path.join(__dirname, '..');
-const privateKey = fs.readFileSync(`${pathToDir}/certificates/server.key`, 'utf8');
-const certificate = fs.readFileSync(`${pathToDir}/certificates/server.crt`, 'utf8');
-const credentials = {
-  key: privateKey,
-  cert: certificate,
-};
+const bodyParser = require('body-parser');
 const app = express();
 const HTTP_PORT = 8080;
-const HTTPS_PORT = 8081;
-const httpServer = http.createServer(app);
-const httpsServer = https.createServer(credentials, app);
+
+app.set('port', (process.env.PORT || HTTP_PORT));
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
 
 app.get('/', (req, res) => res.send('HEBE says Hi'));
 
@@ -26,5 +17,4 @@ app.get('/webhook/', (req, res) => {
   res.send('Error, wrong token');
 });
 
-httpServer.listen(HTTP_PORT, () => console.log(`Listen http on ${HTTP_PORT}`));
-httpsServer.listen(HTTPS_PORT, () => console.log(`Listen https on ${HTTPS_PORT}`));
+app.listen(app.get('port'), () => console.log('Listen http on ', app.get('port')));
